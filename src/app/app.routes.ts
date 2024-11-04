@@ -1,3 +1,16 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { PostListComponent } from './components/post-list/post-list.component';
+import { QuizComponent } from './components/quiz/quiz.component';
 
-export const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: PostListComponent },
+  { path: 'quizzes', component: QuizComponent },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+

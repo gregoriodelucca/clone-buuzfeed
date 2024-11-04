@@ -1,0 +1,7 @@
+<div *ngFor="let quiz of quizzes">
+    <h3>{{ quiz.question }}</h3>
+    <ul>
+      <li *ngFor="let option of quiz.options">{{ option }}</li>
+    </ul>
+  </div>
+  
